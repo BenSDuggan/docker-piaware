@@ -11,7 +11,7 @@ fi
 # Prepare beast-splitter command line
 BEASTSPLITTER_BIN="/usr/local/bin/beast-splitter"
 BEASTSPLITTER_CMD=("--net" "$BEASTHOST:${BEASTPORT:-30005}")
-BEASTSPLITTER_CMD+=("--connect" "127.0.0.1:30004")
+BEASTSPLITTER_CMD+=("--connect" "$BEASTHOST:30004")
 
 # shellcheck disable=SC2016
 "${BEASTSPLITTER_BIN}" "${BEASTSPLITTER_CMD[@]}" \
